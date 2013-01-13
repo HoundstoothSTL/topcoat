@@ -6,6 +6,14 @@ The wp-config.php has been heavily modified, adding variables in for different d
 
 This build was made for us to use internally but feel free to fork or download at will.  
 
+### Usage
+
+    git clone https://github.com/HoundstoothSTL/topcoat.git
+    
+    git submodule update --init
+
+Update wp-config.php in root folder, don't touch anything in /wp
+
 #### Suggested and bundled Plugins
 - WP Paginate : http://wordpress.org/extend/plugins/wp-paginate/
 - Gravity Forms : http://www.gravityforms.com (premium plugin, not bundled)
