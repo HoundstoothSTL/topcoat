@@ -1,0 +1,12 @@
+{
+  "name": "topcoat",
+  "version": "0.1.0",
+  "main": "./wp-config.php",
+  "dependencies": {
+    "acf": "https://github.com/elliotcondon/acf.git",
+    "w3-total-cache": "http://downloads.wordpress.org/plugin/w3-total-cache.latest-stable.zip",
+    "wordpress-seo": "http://downloads.wordpress.org/plugin/wordpress-seo.1.3.4.4.zip",
+    "wp-paginate": "http://downloads.wordpress.org/plugin/wp-paginate.1.2.4.zip"
+
+  }
+}
