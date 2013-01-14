@@ -1,6 +1,6 @@
 {
   "name": "topcoat",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./wp-config.php",
   "dependencies": {
     "acf": "https://github.com/elliotcondon/acf.git",
