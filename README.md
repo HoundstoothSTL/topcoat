@@ -29,8 +29,11 @@ Just run "bower install" and you'll get all the recommended plugins in a /compon
 
 ### Changelog
 
-0.1.1 - Added bower support for plugins
-0.1.0 - Initial Push
+**0.1.1**
+-Added bower support for plugins
+
+**0.1.0**
+-Initial Push
 
 ### Todo
 
