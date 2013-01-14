@@ -12,7 +12,12 @@ This build was made for us to use internally but feel free to fork or download a
     
     git submodule update --init
 
+    bower install
+
 Update wp-config.php in root folder, don't touch anything in /wp
+
+#### Now supports Bower-managed plugins.  
+Just run "bower install" and you'll get all the recommended plugins in a /components directory.
 
 #### Suggested and bundled Plugins
 - WP Paginate : http://wordpress.org/extend/plugins/wp-paginate/
@@ -21,3 +26,12 @@ Update wp-config.php in root folder, don't touch anything in /wp
 - Advanced Custom Fields : http://www.advancedcustomfields.com
 - WordPress SEO by Yoast : http://wordpress.org/extend/plugins/wordpress-seo/
 - W3 Total Cache : http://wordpress.org/extend/plugins/w3-total-cache/
+
+### Changelog
+
+0.1.1 - Added bower support for plugins
+0.1.0 - Initial Push
+
+### Todo
+
+- Add Gruntfile.js to run a copy task [moves files & folders from /components to /content/plugins]
