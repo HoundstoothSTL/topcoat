@@ -29,6 +29,9 @@ Just run "bower install" and you'll get all the recommended plugins in a /compon
 
 ### Changelog
 
+**0.1.2**
+-Added server configs
+
 **0.1.1**
 -Added bower support for plugins
 
@@ -38,4 +41,3 @@ Just run "bower install" and you'll get all the recommended plugins in a /compon
 ### Todo
 
 - Add Gruntfile.js to run a copy task [moves files & folders from /components to /content/plugins]
-- Add server configs for apache (.htaccess) and nginx (nginx.conf)
