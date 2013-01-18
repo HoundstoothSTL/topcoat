@@ -63,10 +63,15 @@ define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/content');
 define('WP_MEMORY_LIMIT', $php_memory_limit);  // Let's up the PHP Memory limit to compensate for various Server Environments
 define('WP_DEFAULT_THEME', $default_theme_name);
 
-// Be sure to drop an empty 'env_local' file in the root of your project
-if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
+// ===========================================================================================
+// This can be used to programatically set the stage when deploying (e.g. production, staging)
+// ===========================================================================================
+define( 'WP_STAGE', '%%WP_STAGE%%' );
+define( 'STAGING_DOMAIN', '%%WP_STAGING_DOMAIN%%' );
 
-    // Local Environment
+if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
+	define( 'WP_LOCAL_DEV', true );
+	// Local Environment
     define('WP_ENV', 'local');
     define('WP_DEBUG', false);
 
@@ -74,30 +79,12 @@ if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
     define('DB_USER', $local_db_user);
     define('DB_PASSWORD', $local_db_password);
     define('DB_HOST', 'localhost');
-
-// Be sure to drop an empty 'env_staging' file in the root of your project
-} elseif ( file_exists( dirname( __FILE__ ) . '/../env_staging' ) ) {
-
-	define('WP_ENV', 'staging');
-    define('WP_DEBUG', false);
-	
-	//Production Environment
-	define('DB_NAME', $staging_db_name);
-	define('DB_USER', $staging_db_user);
-	define('DB_PASSWORD', $staging_db_password);
-	define('DB_HOST', $staging_db_host);
-	
 } else {
-
-	define('WP_ENV', 'production');
-    define('WP_DEBUG', false);
-	
-	//Production Environment
-	define('DB_NAME', $prod_db_name);
-	define('DB_USER', $prod_db_user);
-	define('DB_PASSWORD', $prod_db_password);
-	define('DB_HOST', $prod_db_host);
-	
+	define( 'WP_LOCAL_DEV', false );
+	define( 'DB_NAME', '%%DB_NAME%%' );
+	define( 'DB_USER', '%%DB_USER%%' );
+	define( 'DB_PASSWORD', '%%DB_PASSWORD%%' );
+	define( 'DB_HOST', '%%DB_HOST%%' );
 }
 
 /** Database Charset to use in creating database tables. */
