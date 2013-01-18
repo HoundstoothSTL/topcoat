@@ -1,0 +1,5 @@
+.DS_Store
+__MACOSX
+content/uploads
+components
+node_modules
