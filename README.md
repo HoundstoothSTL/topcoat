@@ -10,11 +10,9 @@ This build was made for us to use internally but feel free to fork or download a
 
     git clone https://github.com/HoundstoothSTL/topcoat.git
     
-    git submodule update --init
-
     bower install
 
-Update wp-config.php in root folder, don't touch anything in /wp
+Update wp-config.php in root folder
 
 #### Now supports Bower-managed plugins.  
 Just run "bower install" and you'll get all the recommended plugins in a /components directory.
