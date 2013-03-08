@@ -12,7 +12,7 @@
 */
 
 $default_table_prefix = '446FGD353GasngjsGAj_';
-$php_memory_limit = '24M';
+$php_memory_limit = '32M';
 
 $local_db_name = '';
 $local_db_user = '';
@@ -57,8 +57,6 @@ define('NONCE_SALT',       'm8DPPs-,Q&Jjsb?2?hx2;Ik03O]69?4JG,#;mnm4<D-%C17?$)Op
 
 define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wp');
 define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME']);
-define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/content');
-define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/content');
 
 define('WP_MEMORY_LIMIT', $php_memory_limit);  // Let's up the PHP Memory limit to compensate for various Server Environments
 define('WP_DEFAULT_THEME', $default_theme_name);

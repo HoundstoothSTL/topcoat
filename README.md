@@ -29,6 +29,13 @@ Just run "bower install" and you'll get all the recommended plugins in a /compon
 
 ### Changelog
 
+**0.2.0**
+-Rearranged folders and removed wp-content constant definition in wp-config.php
+-Upped the WP Memory limit to 32MB 
+-Updated .gitignore to be a bit more robust
+-Removed WP core as a gitmodule, creating issues with pulling nightly builds from git repo
+-Changed /wp directory to /site
+
 **0.1.2**
 -Added server configs
 
