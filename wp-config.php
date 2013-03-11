@@ -9,26 +9,27 @@
  * Define the various Database environments and some base settings
  * Basically set these variables for your own setup
  * The only stuff you need to adjust are the lines BEFORE the "Don't change past this" Line
+ *
+ * We use a script to built out this template, if you don't want to do that, just replace everything
+ * surrounded by {{}} - replace the curly braces as well
 */
 
-$default_table_prefix = '446FGD353GasngjsGAj_';
+$default_table_prefix = '{{tableprefix}}_';
 $php_memory_limit = '32M';
 
-$local_db_name = '';
-$local_db_user = '';
-$local_db_password = '';
+$local_db_name = '{{projectname}}_dev';
+$local_db_user = 'root';
+$local_db_password = '{{localdbpass}}';
 
-$staging_db_name = '';
-$staging_db_user = '';
-$staging_db_password = '';
-$staging_db_host = '';
+$staging_db_name = '{{projectname}}_staging';
+$staging_db_user = '{{remoteuser}}';
+$staging_db_password = '{{remotedbpass}}';
+$staging_db_host = '{{remotehost}}';
 
-$prod_db_name = '';
-$prod_db_user = '';
-$prod_db_password = '';
-$prod_db_host = '';
-
-$default_theme_name = '';
+$prod_db_name = '{{projectname}}_prod';
+$prod_db_user = '{{remotedbuser}}';
+$prod_db_password = '{{remotedbpass}}';
+$prod_db_host = '{{remotehost}}';
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -37,16 +38,11 @@ $default_theme_name = '';
  * Go here: https://api.wordpress.org/secret-key/1.1/salt
  * Copy/Paste what's on that page.
  *
+ * We use a script to built out this template, if you don't want to do that, just replace everything
+ * surrounded by {{}} - replace the curly braces as well
  */
 
-define('AUTH_KEY',         ',-=u{^=}f_F`LT~Uf3z+FH}VBXm5_Y+o6Cn|GL+$?,MF6+` .Lw>L-n]7iZ|NEXx');
-define('SECURE_AUTH_KEY',  't3z|3>%q5zp-CqegJ<ffO:SIX-K+|oCX<8*/)t j#]xRpOtv-KPDo8rG|`%+!>q+');
-define('LOGGED_IN_KEY',    'y|yIOS F;-OoNDrk&o!|=^]vp/w,r)C%HRWs>*F-+8qc_gUDv-k{?}1GUEF^CykG');
-define('NONCE_KEY',        ']<LQL`+{[5&ye3-G_FM*a3Y{1]KR>+Q|wTuAwbsj@qVaf^~XY;h!lbJzc|6>{4R/');
-define('AUTH_SALT',        'Yk~|A86*/urFm;|>lJbQMDL?^}`lwg:dDfW%Uae&z;- zUnU]:q|k|, oZXf2THW');
-define('SECURE_AUTH_SALT', '(|]Nnl^7llQ3FcmO(I26=^H?H>j=sh q*(QE!0>Le5OVVbKRQ) HE;;j>KEulAJ3');
-define('LOGGED_IN_SALT',   'z#|!E2CsUMVi^cIc/K*~%+eRy<6s^<;k*8!|!&W8fHCrU_Ik1!CM}kV)f^`7):M%');
-define('NONCE_SALT',       'm8DPPs-,Q&Jjsb?2?hx2;Ik03O]69?4JG,#;mnm4<D-%C17?$)OpG9]XB|+;lA-w');
+{{generatedsalt}}
 
 /*
  * -------------------------------------------------
@@ -59,7 +55,6 @@ define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wp');
 define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME']);
 
 define('WP_MEMORY_LIMIT', $php_memory_limit);  // Let's up the PHP Memory limit to compensate for various Server Environments
-define('WP_DEFAULT_THEME', $default_theme_name);
 
 // Be sure to drop an empty 'env_local' file in the root of your project
 if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
