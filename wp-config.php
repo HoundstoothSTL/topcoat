@@ -27,7 +27,7 @@ $staging_db_password = '{{remotedbpass}}';
 $staging_db_host = '{{remotehost}}';
 
 $prod_db_name = '{{projectname}}_prod';
-$prod_db_user = '{{remotedbuser}}';
+$prod_db_user = '{{remoteuser}}';
 $prod_db_password = '{{remotedbpass}}';
 $prod_db_host = '{{remotehost}}';
 
@@ -38,11 +38,16 @@ $prod_db_host = '{{remotehost}}';
  * Go here: https://api.wordpress.org/secret-key/1.1/salt
  * Copy/Paste what's on that page.
  *
- * We use a script to built out this template, if you don't want to do that, just replace everything
- * surrounded by {{}} - replace the curly braces as well
  */
 
-{{generatedsalt}}
+define('AUTH_KEY',         'O}Tj?8X(mO|-9XJ<(d.)MY3az/aK *HFaJaXD7>;-;qC+&-@sF%< buO|vYKypl~');
+define('SECURE_AUTH_KEY',  'Rog^yiSC<uzvTij6yy;Pt2hVD-}@nH+zvaZX$+GD];2e:Xg2ooWU8DsV~--ucS7l');
+define('LOGGED_IN_KEY',    '$2tF.-N{YLRGzUogty[BL!LB]4falmGlu4|tee7X:[k?-G+<@9Ov7FyQx?`Q+`<t');
+define('NONCE_KEY',        '(XbcqD+CH,<X3-9k[vZ?8)B+pk++Lkon0J%$)|TE|T&YaoET(q?I9?Vs}W}xGqOj');
+define('AUTH_SALT',        'yYCyZ3ZD>4_2K~]rWTJ:P>}=cTO{4pXswGOo/w||s-)2bjW&7)Er2BL>: {;|1UL');
+define('SECURE_AUTH_SALT', '8Aa+0pR6(}8IeN$fBae2~[,M8-?J8q#)If%v|u-zVhiEvxcJ0[7|k]*%-t3k)PBB');
+define('LOGGED_IN_SALT',   '79tmof+/i:M!Z+8WC~P,/)t-& a@]j1a6+g_(9euF=x+dQ)5gX` )%B~5*0*M.s|');
+define('NONCE_SALT',       'e5zhfXg|oAgr?,&}*ve<9KTj]r|8Fq#ip:-azbo+UnE`=PHB9f9=#&<3NlZEAeH9');
 
 /*
  * -------------------------------------------------
@@ -51,7 +56,7 @@ $prod_db_host = '{{remotehost}}';
 */
 
 
-define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/wp');
+define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/site');
 define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME']);
 
 define('WP_MEMORY_LIMIT', $php_memory_limit);  // Let's up the PHP Memory limit to compensate for various Server Environments
