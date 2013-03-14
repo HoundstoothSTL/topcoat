@@ -24,12 +24,12 @@ $local_db_password = '{{localdbpass}}';
 $staging_db_name = '{{projectname}}_staging';
 $staging_db_user = '{{remoteuser}}';
 $staging_db_password = '{{remotedbpass}}';
-$staging_db_host = '{{remotehost}}';
+$staging_db_host = 'localhost';
 
 $prod_db_name = '{{projectname}}_prod';
 $prod_db_user = '{{remoteuser}}';
 $prod_db_password = '{{remotedbpass}}';
-$prod_db_host = '{{remotehost}}';
+$prod_db_host = 'localhost';
 
 /**#@+
  * Authentication Unique Keys and Salts.
