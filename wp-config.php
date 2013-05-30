@@ -66,7 +66,10 @@ if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
 
     // Local Environment
     define('WP_ENV', 'local');
-    define('WP_DEBUG', false);
+    define('WP_DEBUG', true);
+    define('CONCATENATE_SCRIPTS', false);
+    define('SAVEQUERIES', true);
+    define('EMPTY_TRASH_DAYS', 0);
 
     define('DB_NAME', $local_db_name);
     define('DB_USER', $local_db_user);
@@ -77,7 +80,7 @@ if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
 } elseif ( file_exists( dirname( __FILE__ ) . '/../env_staging' ) ) {
 
 	define('WP_ENV', 'staging');
-    define('WP_DEBUG', false);
+    define('WP_DEBUG', true);
 	
 	//Production Environment
 	define('DB_NAME', $staging_db_name);
@@ -98,40 +101,11 @@ if ( file_exists( dirname( __FILE__ ) . '/../env_local' ) ) {
 	
 }
 
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
-
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
-
-/**#@-*/
-
-/**
- * WordPress Database Table prefix.
- *
- * You can have multiple installations in one database if you give each a unique
- * prefix. Only numbers, letters, and underscores please!
- */
 $table_prefix  = $default_table_prefix;
 
-/**
- * WordPress Localized Language, defaults to English.
- *
- * Change this to localize WordPress. A corresponding MO file for the chosen
- * language must be installed to wp-content/languages. For example, install
- * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
- * language support.
- */
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
 define('WPLANG', '');
-
-/**
- * For developers: WordPress debugging mode.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- */
-define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 
